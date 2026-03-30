@@ -1,0 +1,72 @@
+[package]
+name = "screentrack"
+version = "1.1.1"
+edition = "2021"
+
+[[bin]]
+name = "screentrack"
+path = "src/main.rs"
+
+[dependencies]
+screentrack-store = { path = "../store" }
+screentrack-capture = { path = "../capture" }
+screentrack-summarizer = { path = "../summarizer" }
+clap = { version = "4", features = ["derive"] }
+tokio = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+anyhow = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+chrono = { workspace = true }
+dirs-next = "2"
+regex-lite = "0.1"
+colored = "2"
+pulldown-cmark = { version = "0.13", default-features = false, features = ["simd", "html"] }
+axum = "0.8"
+reqwest = { version = "0.12", features = ["json", "blocking"] }
+objc2 = "0.6"
+objc2-foundation = { version = "0.3", features = [
+    "NSString", "NSThread", "NSRunLoop", "NSTimer", "NSDictionary", "NSArray",
+    "NSAttributedString", "NSRange", "NSValue",
+] }
+objc2-app-kit = { version = "0.3", features = [
+    "NSApplication",
+    "NSStatusBar",
+    "NSStatusItem",
+    "NSStatusBarButton",
+    "NSMenu",
+    "NSMenuItem",
+    "NSImage",
+    "NSAlert",
+    "NSTextField",
+    "NSView",
+    "NSControl",
+    "NSResponder",
+    "NSRunningApplication",
+    "NSWindow",
+    "NSPanel",
+    "NSEvent",
+    "NSButton",
+    "NSScrollView",
+    "NSClipView",
+    "NSTextView",
+    "NSText",
+    "NSTextStorage",
+    "NSTextContainer",
+    "NSLayoutManager",
+    "NSFont",
+    "NSColor",
+    "NSGraphics",
+    "NSSegmentedControl",
+    "NSSegmentedCell",
+    "NSProgressIndicator",
+    "NSAttributedString",
+    "NSFontDescriptor",
+] }
+block2 = "0.6"
+base64 = "0.22"
+image = { workspace = true }
+
+[build-dependencies]
+chrono = "0.4"

@@ -1,0 +1,16 @@
+[package]
+name = "screentrack-store"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+sqlx = { version = "0.8", features = ["runtime-tokio", "sqlite"] }
+tokio = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+anyhow = { workspace = true }
+tracing = { workspace = true }
+chrono = { workspace = true }
+sha2 = "0.10"
+hex = "0.4"
+gethostname = "0.5"

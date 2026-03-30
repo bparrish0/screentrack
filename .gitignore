@@ -1,0 +1,7 @@
+/target/
+/ScreenTrack.app/
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+.DS_Store
+.claude/
